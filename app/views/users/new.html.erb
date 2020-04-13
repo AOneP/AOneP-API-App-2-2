@@ -1,0 +1,14 @@
+<%= form_with url: "/users", local: true do |u| %>
+  <% if @response["errors"].present? %>
+    <% @response["errors"].each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  <% end %>
+
+  <%= u.label :name %>
+  <%= u.text_field :name %>
+  <%= u.label :zawod %>
+  <%= u.text_field :zawod %>
+
+  <%= u.submit 'Stwórz nowego usera' %>
+<% end %>
