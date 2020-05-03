@@ -1,17 +1,52 @@
 require 'net/http'
 require 'json'
 
-class User
-  def initialize(response_body, prased = false)
-    @parsed_body = if parsed
-                    response_body
+module Api
+  module Constants
+    USERS = 'http://localhost:3000/api/users'.freeze
+  end
+end
+
+class UsersSerializer
+  def initialize(opts)
+    @page = opts[:page] || 1
+  end
+
+  def all
+    response_body['users'].map do |user|
+      UserSerializer.new(user, true)
+    end
+  end
+
+  def response_body
+    @response_body ||= JSON.parse(Response.response(url, :get).body)
+  end
+
+  def query_params
+    {
+      page: @page,
+    }.to_query
+  end
+
+  def url
+    [Api::Constants::USERS, query_params].join('?')
+  end
+end
+
+class UserSerializer
+  def initialize(response_body, parsed = false)
+    @parsed_body =  if parsed
+                      response_body
                     else
                       JSON.parse(response_body)
                     end
     @errors = (@parsed_body['errors'] || [])
   end
 
-  def self.all
+  def self.find(id)
+    response_body = JSON.parse(Response.response("http://localhost:3000/api/users/#{id}").body)
+    binding.pry
+    new(response_body, true)
   end
 
   def id
@@ -33,19 +68,17 @@ end
 
 class UsersController < ApplicationController
   def show
-    uri = URI('http://localhost:3000/api/users/1')
-    @users = Net::HTTP.get(uri)
-    @person = JSON.parse(@users, object_class: OpenStruct)
+    # uri = URI('http://localhost:3000/api/users/1')
+    # @users = Net::HTTP.get(uri)
+    @user = UserSerializer.find(params[:id])
+    # @person = JSON.parse(@users, object_class: OpenStruct)
   end
 
   def index
-    @response = JSON.parse(
-      Response.response("http://localhost:3000/api/users?page=#{page}", :get).body
-    )
+    @users = UsersSerializer.new(page: page).all
   end
 
   def next_page
-    binding.pry
     return params["page"].to_i += 1
     render :index
   end
@@ -89,7 +122,10 @@ class Response
   end
 
   def response
-    http.request(send("request_#{@method_name}"))
+    http.request(send("request_#{@method_name}")).tap do |response|
+      fail PageNotFoundError if response.code == '404'
+      fail "Unhandled code - #{response.code}" if response.code != '200'
+    end
   end
 
   private

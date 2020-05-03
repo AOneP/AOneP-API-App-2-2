@@ -1,9 +1,7 @@
-<h1>Users</h1>
+<h2> Users </h2>
 
-<% @response['users'].each do |u| %>
-
-<%= u["name"] %>
-
+<% @users.each do |u| %>
+  <%= u.name %>
 <% end %>
 
 <%= link_to "Następni userzy", next_page_path %>

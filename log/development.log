@@ -9043,3 +9043,592 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 41ms (Views: 24.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-05-02 22:27:38 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Adrian/.rvm/gems/ruby-2.4.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Adrian/.rvm/gems/ruby-2.4.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (32.3ms)
+Completed 200 OK in 73ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-05-02 22:27:48 +0200
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `response_body' for #<UserCollectionSerializer:0x007fc1422589a0>
+Did you mean?  respond_to?):
+  
+app/controllers/users_controller.rb:6:in `initialize'
+app/controllers/users_controller.rb:55:in `new'
+app/controllers/users_controller.rb:55:in `index'
+Started GET "/users" for ::1 at 2020-05-02 22:28:10 +0200
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Hash into String):
+  
+app/controllers/users_controller.rb:6:in `initialize'
+app/controllers/users_controller.rb:55:in `new'
+app/controllers/users_controller.rb:55:in `index'
+Started GET "/users" for ::1 at 2020-05-02 22:28:24 +0200
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Hash into String):
+  
+app/controllers/users_controller.rb:6:in `initialize'
+app/controllers/users_controller.rb:55:in `new'
+app/controllers/users_controller.rb:55:in `index'
+Started GET "/users" for ::1 at 2020-05-02 22:35:22 +0200
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/users_controller.rb:27:in `[]'
+app/controllers/users_controller.rb:27:in `initialize'
+app/controllers/users_controller.rb:11:in `new'
+app/controllers/users_controller.rb:11:in `block in all'
+app/controllers/users_controller.rb:10:in `each'
+app/controllers/users_controller.rb:10:in `map'
+app/controllers/users_controller.rb:10:in `all'
+app/controllers/users_controller.rb:55:in `index'
+Started GET "/users" for ::1 at 2020-05-02 22:35:38 +0200
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/users_controller.rb:27:in `[]'
+app/controllers/users_controller.rb:27:in `initialize'
+app/controllers/users_controller.rb:11:in `new'
+app/controllers/users_controller.rb:11:in `block in all'
+app/controllers/users_controller.rb:10:in `each'
+app/controllers/users_controller.rb:10:in `map'
+app/controllers/users_controller.rb:10:in `all'
+app/controllers/users_controller.rb:55:in `index'
+Started GET "/users" for ::1 at 2020-05-02 22:36:01 +0200
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 31337ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/users_controller.rb:28:in `[]'
+app/controllers/users_controller.rb:28:in `initialize'
+app/controllers/users_controller.rb:11:in `new'
+app/controllers/users_controller.rb:11:in `block in all'
+app/controllers/users_controller.rb:10:in `each'
+app/controllers/users_controller.rb:10:in `map'
+app/controllers/users_controller.rb:10:in `all'
+app/controllers/users_controller.rb:56:in `index'
+Started GET "/users" for ::1 at 2020-05-02 22:36:48 +0200
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 44776ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/users_controller.rb:28:in `[]'
+app/controllers/users_controller.rb:28:in `initialize'
+app/controllers/users_controller.rb:12:in `new'
+app/controllers/users_controller.rb:12:in `block in all'
+app/controllers/users_controller.rb:10:in `each'
+app/controllers/users_controller.rb:10:in `map'
+app/controllers/users_controller.rb:10:in `all'
+app/controllers/users_controller.rb:56:in `index'
+Started GET "/users" for ::1 at 2020-05-02 22:37:34 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: <h2>Users</h1>
+    2: 
+    3: <% @response['users'].each do |u| %>
+    4:   <%= u["name"] %>
+    5: <% end %>
+    6: 
+  
+app/views/users/index.html.erb:3:in `_app_views_users_index_html_erb__2595290896817226137_70233996312880'
+Started GET "/users" for ::1 at 2020-05-02 22:37:55 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 601ms (Views: 582.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-05-02 22:38:02 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 62ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?page=2" for ::1 at 2020-05-02 22:38:07 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 54ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?page=3" for ::1 at 2020-05-02 22:38:09 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 49ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?page=4" for ::1 at 2020-05-02 22:38:11 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 51ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?page=5" for ::1 at 2020-05-02 22:38:18 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"5"}
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 73ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?page=2" for ::1 at 2020-05-02 22:38:20 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 84ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?page=3" for ::1 at 2020-05-02 22:38:23 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 71ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?page=3" for ::1 at 2020-05-02 22:44:58 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 75ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?page=1" for ::1 at 2020-05-02 22:45:01 +0200
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 72ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/23" for ::1 at 2020-05-02 22:47:25 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 285ms (Views: 91.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/23" for ::1 at 2020-05-02 22:51:58 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 147ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/23" for ::1 at 2020-05-02 22:52:29 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 117ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2020-05-02 22:52:32 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 56ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for ::1 at 2020-05-02 22:52:36 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 60ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for ::1 at 2020-05-02 22:52:38 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 69ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for ::1 at 2020-05-02 22:52:40 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for ::1 at 2020-05-02 22:53:07 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+Started GET "/users/4" for ::1 at 2020-05-02 22:53:19 +0200
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14456ms (Views: 71.5ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1884ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for ::1 at 2020-05-02 22:54:20 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 46ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for ::1 at 2020-05-02 22:54:21 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 43ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/23" for ::1 at 2020-05-02 22:54:26 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 111ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/23" for ::1 at 2020-05-02 22:54:38 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 75ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/23" for ::1 at 2020-05-02 22:54:44 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+Started GET "/users/1" for ::1 at 2020-05-02 22:55:03 +0200
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23031ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5113ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for ::1 at 2020-05-02 22:55:18 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 55ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for ::1 at 2020-05-02 22:55:20 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 61ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for ::1 at 2020-05-02 22:55:26 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 58843ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for ::1 at 2020-05-02 22:56:33 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 73ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for ::1 at 2020-05-02 22:56:57 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 60ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for ::1 at 2020-05-02 22:57:00 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 70ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/5" for ::1 at 2020-05-02 22:57:03 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 58ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/6" for ::1 at 2020-05-02 22:57:05 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/23" for ::1 at 2020-05-02 22:57:10 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 91ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/23" for ::1 at 2020-05-02 22:58:29 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Net::HTTPNotFound into String):
+  
+app/controllers/users_controller.rb:41:in `initialize'
+app/controllers/users_controller.rb:48:in `new'
+app/controllers/users_controller.rb:48:in `find'
+app/controllers/users_controller.rb:72:in `show'
+Started GET "/users/6" for ::1 at 2020-05-02 22:58:34 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Net::HTTPOK into String):
+  
+app/controllers/users_controller.rb:41:in `initialize'
+app/controllers/users_controller.rb:48:in `new'
+app/controllers/users_controller.rb:48:in `find'
+app/controllers/users_controller.rb:72:in `show'
+Started GET "/users/6" for ::1 at 2020-05-02 22:59:29 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+Started GET "/users/6" for ::1 at 2020-05-02 23:00:10 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 535ms (Views: 505.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/23" for ::1 at 2020-05-02 23:00:16 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 92ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/23" for ::1 at 2020-05-02 23:00:46 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 149ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/23" for ::1 at 2020-05-02 23:01:19 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 164895ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/23" for ::1 at 2020-05-02 23:04:06 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (Nie znaleziono usera):
+  
+app/controllers/users_controller.rb:126:in `block in response'
+app/controllers/users_controller.rb:125:in `tap'
+app/controllers/users_controller.rb:125:in `response'
+app/controllers/users_controller.rb:121:in `response'
+app/controllers/users_controller.rb:47:in `find'
+app/controllers/users_controller.rb:73:in `show'
+Started GET "/users/23" for ::1 at 2020-05-02 23:06:52 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (Nie znaleziono usera):
+  
+app/controllers/users_controller.rb:126:in `block in response'
+app/controllers/users_controller.rb:125:in `tap'
+app/controllers/users_controller.rb:125:in `response'
+app/controllers/users_controller.rb:121:in `response'
+app/controllers/users_controller.rb:47:in `find'
+app/controllers/users_controller.rb:73:in `show'
+Started GET "/users/23" for ::1 at 2020-05-02 23:07:02 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (unknown code - 404):
+  
+app/controllers/users_controller.rb:127:in `block in response'
+app/controllers/users_controller.rb:125:in `tap'
+app/controllers/users_controller.rb:125:in `response'
+app/controllers/users_controller.rb:121:in `response'
+app/controllers/users_controller.rb:47:in `find'
+app/controllers/users_controller.rb:73:in `show'
+Started GET "/users/23" for ::1 at 2020-05-02 23:09:52 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 0.0ms)
+
+
+  
+PageNotFoundError (Napisz tu co chesz):
+  
+app/controllers/users_controller.rb:131:in `block in response'
+app/controllers/users_controller.rb:130:in `tap'
+app/controllers/users_controller.rb:130:in `response'
+app/controllers/users_controller.rb:126:in `response'
+app/controllers/users_controller.rb:47:in `find'
+app/controllers/users_controller.rb:73:in `show'
+Started GET "/users/23" for ::1 at 2020-05-02 23:14:13 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (dupa):
+  
+app/controllers/application_controller.rb:11:in `error_render_method'
+Started GET "/users/23" for ::1 at 2020-05-02 23:16:32 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering errors/404.html.erb
+  Rendered errors/404.html.erb (1.2ms)
+Completed 200 OK in 100ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/23" for ::1 at 2020-05-02 23:17:13 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering errors/404.html.erb
+  Rendered errors/404.html.erb (0.8ms)
+Completed 200 OK in 72ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/23" for ::1 at 2020-05-02 23:18:38 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+Started GET "/users/23" for ::1 at 2020-05-02 23:21:17 +0200
+Completed 200 OK in 160047ms (ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering errors/404.html.erb
+  Rendered errors/404.html.erb (0.9ms)
+Completed 500 Internal Server Error in 77ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+  
+LocalJumpError (unexpected return):
+  
+app/controllers/application_controller.rb:11:in `block in <class:ApplicationController>'
+Started GET "/users/23" for ::1 at 2020-05-02 23:21:47 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering errors/404.html.erb
+  Rendered errors/404.html.erb (0.4ms)
+Completed 500 Internal Server Error in 76ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+  
+LocalJumpError (unexpected return):
+  
+app/controllers/application_controller.rb:11:in `block in <class:ApplicationController>'
+Started GET "/users/23" for ::1 at 2020-05-02 23:22:29 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+Started GET "/users/23" for ::1 at 2020-05-02 23:24:47 +0200
+  Rendering errors/404.html.erb
+  Rendered errors/404.html.erb (0.6ms)
+Completed 500 Internal Server Error in 140952ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+  
+LocalJumpError (unexpected return):
+  
+app/controllers/application_controller.rb:12:in `block in <class:ApplicationController>'
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering errors/404.html.erb
+  Rendered errors/404.html.erb (0.1ms)
+Completed 200 OK in 83ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
